@@ -24,3 +24,12 @@ finding_all = doc.find_all("h2")
 tags = doc.find_all("div")[0]  # find_all always returns a list(?)
 nested_tags = tags.find_all("p")
 print(nested_tags)
+
+
+# You can access a tag attributes by using tag["value"], this way you can also add attributes to the tag.
+# tag.attrs returns a dictionary with all the attributes of the tag that you are using
+
+# You can search for multiple tags using: doc.find_all(["div", "p"])
+# doc.find_all(["p"], text="this in the inside", value="this is a value")
+
+# You can also search tags by classNames using doc.find_all(class_="btn-primary")
